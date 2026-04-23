@@ -13,6 +13,12 @@ declare module 'positron' {
 		StatementRangeSyntaxError: typeof StatementRangeSyntaxError;
 	}
 
+	export interface LanguageRuntimeSession {
+		readonly runtimeMetadata: {
+			readonly languageId: string;
+		};
+	}
+
 	export interface PositronRuntime {
 		executeCode(
 			languageId: string,
@@ -30,6 +36,8 @@ declare module 'positron' {
 			cellRanges: vscode.Range[],
 			executionMetadata?: Record<string, any>[]
 		): Thenable<void>;
+
+		getForegroundSession(): Thenable<LanguageRuntimeSession | undefined>;
 	}
 
 	export interface PositronLanguages {

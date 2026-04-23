@@ -11,7 +11,7 @@
     "pandoc",
     "quarto"
   ],
-  "version": "1.131.0",
+  "version": "1.132.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/quarto-dev/quarto/tree/main/apps/vscode"
@@ -91,10 +91,7 @@
         "id": "typst",
         "aliases": [
           "Typst",
-          "mermaid"
-        ],
-        "extensions": [
-          ".typ"
+          "typst"
         ],
         "configuration": "./languages/typst/typst.configuration.json"
       }
@@ -1257,6 +1254,20 @@
           "type": "boolean",
           "default": false,
           "markdownDescription": "Write markdown links as references rather than inline. Reference links are written to the location specified in `#quarto.visualEditor.markdownReferences#`."
+        },
+        "quarto.yaml.documentLinks.enabled": {
+          "order": 45,
+          "scope": "window",
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enable clickable file links in `_quarto.yml` files."
+        },
+        "quarto.yaml.filepathCompletions.enabled": {
+          "order": 46,
+          "scope": "window",
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enable file path autocomplete in `_quarto.yml` files."
         },
         "quarto.zotero.library": {
           "order": 50,
