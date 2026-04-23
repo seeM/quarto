@@ -90,8 +90,15 @@ export function hooksExtensionHost(): ExtensionHost {
                 for (let i = 0; i < blocks.length; i++) {
                   const metadata = executionMetadata?.[i];
                   await runtime.executeCode(
-                    language, blocks[i], false, true,
-                    undefined, undefined, undefined,
+                    language,   // The language ID
+                    blocks[i],  // The code string to execute
+                    false,      // Whether to focus the console
+                    true,       // Whether to allow incomplete code to run
+                    undefined,  // The execution mode
+                    undefined,  // The error behavior
+                    undefined,  // An optional observer
+                    undefined,  // The specific session ID in which to execute
+                    editorUri,  // The document URI 
                     metadata
                   );
                 }

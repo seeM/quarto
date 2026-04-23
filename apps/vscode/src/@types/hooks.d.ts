@@ -27,7 +27,9 @@ declare module 'positron' {
 			allowIncomplete: boolean,
 			mode?: string,
 			errorBehavior?: string,
-			codeLocation?: object,
+			observer?: object,
+			sessionId?: string,
+			documentUri?: vscode.Uri,
 			executionMetadata?: Record<string, any>
 		): Thenable<boolean>;
 
