@@ -5,6 +5,7 @@
 - Added clickable document links for file paths in `_quarto.yml` files. File paths are now clickable and navigate directly to the referenced file (<https://github.com/quarto-dev/quarto/pull/906>).
 - Added filepath autocompletion in `_quarto.yml` files. When editing YAML values, the extension now suggests project files as you type (<https://github.com/quarto-dev/quarto/pull/906>).
 - In an empty document, Positron's active runtime is now used to choose the language for a new code cell (<https://github.com/quarto-dev/quarto/pull/951>).
+- Send cell figure options (width/height) to Positron to control sizing in its Plots pane (<https://github.com/quarto-dev/quarto/pull/938>).
 
 ## 1.131.0 (Release on 2026-04-14)
 
